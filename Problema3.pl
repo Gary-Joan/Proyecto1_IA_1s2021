@@ -6,6 +6,7 @@ reverseListHelper([],Acc,Acc).
 
 reverseListHelper([H|T],Acc,ReversedList):-
  reverseListHelper(T,[H|Acc],ReversedList).
+ 
 %ver si una lista es palindromo
 palindromo(Xs):-
     reversa(Xs, Xs).
@@ -19,3 +20,22 @@ insertar(X,L1,0,[X|L1]).
 insertar(X,[C|R],Pos,[C|R2]):-
 Pos1 is Pos-1,
 insertar(X,R,Pos1,R2), !.
+
+%dividir lista en 2
+
+dividir(L, A, B) :-
+    append(A, B, L),
+    length(A, N),
+    length(B, N).
+
+dividir(L, A, B) :-
+    append(A, B, L),
+    length(A, N),
+    N1 is N + 1,
+    length(B, N1).
+
+dividir(L, A, B) :-
+    append(A, B, L),
+    length(A, N),
+    N1 is N - 1,
+    length(B, N1).

@@ -56,10 +56,13 @@ progenitor(enrique,lois).
 
 pareja(pepper,barry).
 pareja(barry,pepper).
+
 pareja(peter,diana).
 pareja(diana,peter).
+
 pareja(bend, may).
 pareja(may,bend).
+
 pareja(enrique,rachel).
 pareja(rachel,enrique).
 
