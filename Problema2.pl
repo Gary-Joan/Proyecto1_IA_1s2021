@@ -52,6 +52,6 @@ write('            Ruth - Feliciano                  Pedro - Diana '),nl,
 write('               ___|___                              |'), nl,
 write('              |       |                           Manuel' ),nl,
 write('             Ines    Jonas - Soledad'),nl,
-write('                       ____|____ '),nl,
-write('                       |        | '),nl,
-write('                       Daniel Constancia').
+write('                      ______|_____ '),nl,
+write('                      |          | '),nl,
+write('                    Daniel    Constancia').
