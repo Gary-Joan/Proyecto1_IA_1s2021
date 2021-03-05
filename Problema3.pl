@@ -19,7 +19,7 @@ duplicar([C|L1],[C,C|L2]):-duplicar(L1,L2).
 insertar(X,L1,0,[X|L1]).
 insertar(X,[C|R],Pos,[C|R2]):-
 Pos1 is Pos-1,
-insertar(X,R,Pos1,R2), !.
+insertar(X,R,Pos1,R2).
 
 %dividir lista en 2
 
