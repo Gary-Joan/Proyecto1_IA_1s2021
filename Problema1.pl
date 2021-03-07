@@ -1,5 +1,7 @@
 % Hechos
 
+nombre(clark).
+
 hombre(barry).
 hombre(peter).
 hombre(ben).
@@ -102,4 +104,4 @@ tio(X,Y):-esposo(X,Z),hermana(Z,W),progenitor(W,Y),hombre(X).
 tia(X,Y):-hermana(X,Z),progenitor(Z,Y),mujer(X).
 tia(X,Y):-esposa(X,Z),hermano(Z,W),progenitor(W,Y),mujer(X).
 
-sospechoso(X):-abuelo(bruce,X),nieto(X,bruce),primo(X,clark),tio(barry,X),hermana(Y,X).
+sospechoso(X):-abuelo(bruce,X),nieto(X,bruce),primo(X,clark),tio(barry,X),hermana(Y,X),not(nombre(X)).
