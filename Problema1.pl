@@ -31,42 +31,39 @@ progenitor(bruce,barry).
 progenitor(bruce,diana).
 progenitor(bruce,may).
 progenitor(bruce,rachel).
+progenitor(bruce,pepper).
 
-progenitor(barry,tony).
-progenitor(barry,lara).
 progenitor(pepper,tony).
-progenitor(pepper,lara).
+
+progenitor(enrique,clark).
+progenitor(enrique,lois).
+progenitor(rachel,clark).
+progenitor(rachel,lois).
 
 progenitor(diana,mary).
 progenitor(diana,harry).
 progenitor(peter,mary).
 progenitor(peter,harry).
 
+progenitor(ben,ezio).
+progenitor(ben,lorenzo).
+progenitor(ben,sergio).
 progenitor(may,ezio).
 progenitor(may,lorenzo).
 progenitor(may,sergio).
-progenitor(bend,ezio).
-progenitor(bend,lorenzo).
-progenitor(bend,ezio).
 
-progenitor(rachel,clark).
-progenitor(rachel,lois).
-progenitor(enrique,clark).
-progenitor(enrique,lois).
 
-pareja(pepper,barry).
-pareja(barry,pepper).
+pareja(enrrique,rachel).
+pareja(rachel,enrrique).
 
 pareja(peter,diana).
 pareja(diana,peter).
 
-pareja(bend, may).
-pareja(may,bend).
+pareja(ben, may).
+pareja(may,ben).
 
-pareja(enrique,rachel).
-pareja(rachel,enrique).
-
-
+pareja(marta,bruce).
+pareja(bruce,marta).
 
 
 % Reglas
