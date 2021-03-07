@@ -2,7 +2,7 @@
 
 hombre(barry).
 hombre(peter).
-hombre(bend).
+hombre(ben).
 hombre(enrique).
 hombre(tony).
 hombre(harry).
@@ -31,6 +31,7 @@ progenitor(bruce,barry).
 progenitor(bruce,diana).
 progenitor(bruce,may).
 progenitor(bruce,rachel).
+
 progenitor(bruce,pepper).
 
 progenitor(pepper,tony).
@@ -53,8 +54,8 @@ progenitor(may,lorenzo).
 progenitor(may,sergio).
 
 
-pareja(enrrique,rachel).
-pareja(rachel,enrrique).
+pareja(enrique,rachel).
+pareja(rachel,enrique).
 
 pareja(peter,diana).
 pareja(diana,peter).
@@ -94,3 +95,11 @@ nieta(X,Y):-progenitor(Y,Z),progenitor(Z,X),mujer(X).
 
 primo(X,Y):-progenitor(Z,X),progenitor(W,Y),hermanos(Z,W),hombre(X).
 prima(X,Y):-progenitor(Z,X),progenitor(W,Y),hermanos(Z,W),mujer(X).
+
+tio(X,Y):-hermano(X,Z),progenitor(Z,Y),hombre(X).
+tio(X,Y):-esposo(X,Z),hermana(Z,W),progenitor(W,Y),hombre(X).
+
+tia(X,Y):-hermana(X,Z),progenitor(Z,Y),mujer(X).
+tia(X,Y):-esposa(X,Z),hermano(Z,W),progenitor(W,Y),mujer(X).
+
+sospechoso(X):-abuelo(bruce,X),nieto(X,bruce),primo(X,clark),tio(barry,X),hermana(Y,X).
