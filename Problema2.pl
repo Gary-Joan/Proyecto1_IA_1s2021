@@ -25,24 +25,31 @@ pareja(pedro,diana).
 pareja(jonas,soledad).
 pareja(soledad,jonas).
 
-padre(ana_lucia,ruth).
-padre(lamar,ruth).
-padre(ana_lucia,pedro).
-padre(lamar,pedro).
+progenitor(ana_lucia,ruth).
+progenitor(lamar,ruth).
+progenitor(ana_lucia,pedro).
+progenitor(lamar,pedro).
 
-padre(pedro,manuel).
-padre(diana,manuel).
+progenitor(pedro,manuel).
+progenitor(diana,manuel).
 
-padre(ruth, ines).
-padre(feliciano,ines).
-padre(ruth,jonas).
-padre(feliciano,jonas).
+progenitor(ruth, ines).
+progenitor(feliciano,ines).
+progenitor(ruth,jonas).
+progenitor(feliciano,jonas).
 
-padre(jonas,daniel).
-padre(jonas,constancia).
-padre(soledad,daniel).
-padre(soledad,constancia).
+progenitor(jonas,daniel).
+progenitor(jonas,constancia).
+progenitor(soledad,daniel).
+progenitor(soledad,constancia).
 % Reglas
+
+padre(X,Y):-hombre(X),progenitor(X,Y).
+madre(X,Y):-mujer(X),progenitor(X,Y).
+
+hermanos(X,Y):-progenitor(Z,X),progenitor(Z,Y).
+hermano(X,Y):-hombre(X),hermanos(X,Y).
+hermana(X,Y):-mujer(X),hermanos(X,Y).
 
 imprimir_arbol(_) :- 
 write('                     Lamar - Ana lucia'),nl,
