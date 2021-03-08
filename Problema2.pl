@@ -44,6 +44,8 @@ progenitor(jonas,constancia).
 progenitor(soledad,daniel).
 progenitor(soledad,constancia).
 
+
+
 % Reglas
 
 padre(X,Y):-hombre(X),progenitor(X,Y).
