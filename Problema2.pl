@@ -27,6 +27,7 @@ pareja(soledad,jonas).
 
 progenitor(ana_lucia,ruth).
 progenitor(lamar,ruth).
+
 progenitor(ana_lucia,feliciano).
 progenitor(lamar,feliciano).
 
